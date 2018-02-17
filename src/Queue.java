@@ -31,9 +31,9 @@ public class Queue {
         return numWaiting;
     }
 
-    public void enqueue(User user) throws IllegalAccessException {
+    public void enqueue(User user) throws IllegalArgumentException {
         if (user == null) {
-            throw new IllegalAccessException();
+            throw new IllegalArgumentException();
         }
         userList.add(numWaiting, user);
         numWaiting++;
